@@ -16,11 +16,25 @@
 #define MOTOR_STEP 20 
 #define MOTOR_DELAY 2000000
 
-void flashLEDS(void){
-    Roach_BarGraph(12);
-    Roach_BarGraph(0);
-    Roach_BarGraph(12);
-    Roach_BarGraph(0);
+void flashLEDS(int dir){
+    int i;
+    int led;
+    if(dir){
+        for(led = 0; led < 12; led++){
+            Roach_LEDSSet( 1 << led);
+            for(i = 0; i , 50000; i++);
+        }
+    }
+    else{
+        for(led = 11; led >= 0; led--){
+            Roach_LEDSSet(1 << led);
+            for(i = 0; i , 50000; i++);
+            
+        }
+    }
+    Roach_LEDSSet(0x000);    
+    
+    
 }
 
 int main(void) {
@@ -36,7 +50,12 @@ int main(void) {
     
     //more print statements to explain how it works...
     
-    printf(" Self-Created Roach Test Harness \r\n");
+    printf("Self-Created Roach Test Harness \r\n");
+    printf("Four different tests tied to each bumper\r\n");
+    printf("Front Left Bumper Test Displays light levels + LED FLash \r\n");
+    printf("Front Right bumper test displays Voltage levels + LED flash \r\n");
+    printf("Back Left Bumper test runs through the left motor testing all speeds \r\n");
+    printf("Back right bumper test runs though the right motor testing the speeds \r\n");
     
     while(1){
         
@@ -59,14 +78,18 @@ int main(void) {
             }
             
         if(FL_bumper == BUMPER_TRIPPED){
-            flashLEDS();
+            flashLEDS(1);
             printf("Front Left bumper Light Level: %d\r\n", light_lvl);
+            int i;
+            for(i = 0; i < MOTOR_DELAY; i++);
   
         }
         
         if(FR_bumper == BUMPER_TRIPPED){
-            flashLEDS();
+            flashLEDS(0);
             printf("Front Right bumper Voltage Level: %d\r\n", battery_lvl);
+            int i;
+            for(i = 0; i < MOTOR_DELAY; i++);
   
         }
         
@@ -77,12 +100,19 @@ int main(void) {
                 printf("Left motor: %d\r\n", speed);
                 int i;
                 for(i = 0; i < MOTOR_DELAY; i++);
-                  
                
-              
+          
             }
+            for(speed = 100; speed >= 0; speed -= MOTOR_STEP){
+                Roach_LeftMtrSpeed(speed);
+                printf("Left motor: %d\r\n", speed);
+                int i;
+                for(i = 0; i < MOTOR_DELAY; i++);
+            }
+                
+            
             Roach_LeftMtrSpeed(0);
-            printf(" motor test Done \r\n");
+            printf("Left motor test Done \r\n");
         }
           
         if(BR_bumper == BUMPER_TRIPPED){
@@ -95,6 +125,13 @@ int main(void) {
                   
                
               
+            }
+            
+            for(speed = 100; speed >= 0; speed -= MOTOR_STEP){
+                Roach_RightMtrSpeed(speed);
+                printf("Right motor: %d\r\n", speed);
+                int i;
+                for(i = 0; i < MOTOR_DELAY; i++);
             }
             Roach_RightMtrSpeed(0);
             printf("Right motor test Done \r\n");
