@@ -4,6 +4,7 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>/Users/haariswasti/Downloads/ECE118/include/roach.h</itemPath>
       <itemPath>/Users/haariswasti/Downloads/ECE118/include/BOARD.h</itemPath>
       <itemPath>/Users/haariswasti/Downloads/ECE118/include/AD.h</itemPath>
       <itemPath>/Users/haariswasti/Downloads/ECE118/include/serial.h</itemPath>
@@ -17,10 +18,11 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>mainXC16.c</itemPath>
       <itemPath>/Users/haariswasti/Downloads/ECE118/src/BOARD.c</itemPath>
       <itemPath>/Users/haariswasti/Downloads/ECE118/src/AD.c</itemPath>
+      <itemPath>/Users/haariswasti/Downloads/ECE118/src/roach.c</itemPath>
       <itemPath>/Users/haariswasti/Downloads/ECE118/src/serial.c</itemPath>
+      <itemPath>/Users/haariswasti/Mechatronics/Lab0TestHarness.X/newmainXC16.c</itemPath>
       <itemPath>/Users/haariswasti/Downloads/ECE118/src/pwm.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
@@ -30,7 +32,7 @@
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
-    <Elem>../../Downloads/ECE118</Elem>
+    <Elem>/Users/haariswasti/Downloads/ECE118</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
