@@ -4,7 +4,14 @@
 /Lab0TestHarness.X/dist/
 /Lab0ES.X/build/
 /Lab0ES.X/dist/
+/Lab0P2.X/build/
+/Lab0P2.X/dist/
+/Lab0P4.X/build/
+/Lab0P4.X/dist/
 /Lab0P5.X/build/
 /Lab0P5.X/dist/
 /Lab0P6.X/build/
 /Lab0P6.X/dist/
+.DS_Store
+*.DS_Store
+nbproject/private/
