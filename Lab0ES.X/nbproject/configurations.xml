@@ -39,6 +39,11 @@
       <itemPath>/Users/haariswasti/Downloads/ECE118/src/serial.c</itemPath>
       <itemPath>/Users/haariswasti/Downloads/ECE118/src/roach.c</itemPath>
       <itemPath>/Users/haariswasti/Downloads/ECE118/src/pwm.c</itemPath>
+      <itemPath>/Users/haariswasti/Downloads/ECE118/src/ES_KeyboardInput.c</itemPath>
+      <itemPath>/Users/haariswasti/Downloads/ECE118/src/ES_PostList.c</itemPath>
+      <itemPath>/Users/haariswasti/Downloads/ECE118/src/ES_Queue.c</itemPath>
+      <itemPath>/Users/haariswasti/Downloads/ECE118/src/ES_CheckEvents.c</itemPath>
+      <itemPath>/Users/haariswasti/Downloads/ECE118/src/ES_Timers.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -100,11 +105,12 @@
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories" value=""/>
+        <property key="extra-include-directories"
+                  value=".;../../Downloads/ECE118/include;../../Downloads/ECE118/templates"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="false"/>
-        <property key="make-warnings-into-errors" value="false"/>
+        <property key="make-warnings-into-errors" value="true"/>
         <property key="optimization-level" value=""/>
         <property key="place-data-into-section" value="false"/>
         <property key="post-instruction-scheduling" value="default"/>
@@ -232,6 +238,9 @@
         <property key="codecoverage.enabled" value="Disable"/>
         <property key="codecoverage.enableoutputtofile" value="false"/>
         <property key="codecoverage.outputfile" value=""/>
+        <property key="debugoptions.debug-startup" value="Use system settings"/>
+        <property key="debugoptions.reset-behaviour" value="Use system settings"/>
+        <property key="lastid" value=""/>
         <property key="oscillator.auxfrequency" value="120"/>
         <property key="oscillator.auxfrequencyunit" value="Mega"/>
         <property key="oscillator.frequency" value="1"/>
@@ -701,6 +710,9 @@
         <property key="codecoverage.enabled" value="Disable"/>
         <property key="codecoverage.enableoutputtofile" value="false"/>
         <property key="codecoverage.outputfile" value=""/>
+        <property key="debugoptions.debug-startup" value="Use system settings"/>
+        <property key="debugoptions.reset-behaviour" value="Use system settings"/>
+        <property key="lastid" value=""/>
         <property key="oscillator.auxfrequency" value="120"/>
         <property key="oscillator.auxfrequencyunit" value="Mega"/>
         <property key="oscillator.frequency" value="1"/>
